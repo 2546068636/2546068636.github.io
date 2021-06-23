@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>[简历]宋泊然</title>
+	<style>
+	
+	#body {
+  margin: 0;
+  padding: 0 5%;
+  font-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+  color: #000000;
+  background: #48b379;
+}
+ 
+#h2 {
+  margin: 3em 0 0 0;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+ 
+/* -------------------------------------
+ * timeline
+ * ------------------------------------- */
+#timeline {
+  list-style: none;
+  margin: 120px 0 0;
+  padding: 0;
+  border-top: 8px solid #eee9dc;
+  display: table;
+  border-spacing: 30px 0;
+}
+#timeline li {
+  display: table-cell;
+}
+#timeline li .relative {
+  position: relative;
+}
+#timeline p {
+  margin: 0 0 15px;
+}
+ 
+#date {
+  text-align: center;
+  top: -55px;
+  left: 0;
+  right: 0;
+  font-size: 0.95em;
+  line-height: 20px;
+  position: absolute;
+}
+ 
+#circle {
+  margin: 0 auto;
+  top: -14px;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #48b379;
+  border: 5px solid #eee9dc;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+ 
+#content {
+  width: 200px;
+  max-height: 0;
+  margin-top: 40px;
+  vertical-align: top;
+  padding: 50px 15px 15px;
+  transition: width 0.4s linear, max-height 0.4s linear;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+  position: relative;
+}
+#content:before, .content:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  bottom: 100%;
+}
+#content:before {
+  border-bottom-color: inherit;
+  border-width: 15px;
+  left: 50%;
+  margin-left: -15px;
+}
+#content:after {
+  border-bottom-color: #48b379;
+  border-width: 12px;
+  left: 50%;
+  margin-left: -12px;
+}
+#content p {
+  max-height: 0;
+  color: transparent;
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
+  overflow: hidden;
+}
+ 
+#label {
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  top: 60px;
+  left: 15px;
+}
+ 
+#radio {
+  display: none;
+}
+ 
+#radio:checked + .relative label {
+  cursor: auto;
+  width: 400px;
+  transition: width 0.3s linear 0.2s;
+}
+#radio:checked + .relative .circle {
+  background: #f98262;
+}
+#radio:checked ~ .content {
+  max-height: 180px;
+  border-color: #eee9dc;
+  width: 400px;
+}
+#radio:checked ~ .content p {
+  max-height: 200px;
+  color: #eee9dc;
+  transition: color 0.3s linear 0.3s;
+}
+	</style>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script>
+        function loading() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <article class="container">
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关，记得及时删除这段代码 Start-->
+
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>
+            <!-- 左侧固定开关，记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section >
+                <section class="portrait">
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="me.jpg" >
+                </section>
+
+                <h1 class="name">BoRan Song</h1>
+                <h4 class="info-job">Software engineer</h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>ESSENTIAL INFORMATION</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>Personal</label>
+                        <span>BoRan Song/Female/24</span>
+                    </li>
+                    <li>
+                        <label>English level</label>
+                        <span>CET-6</span>
+                    </li>
+                    <li>
+                        <label>Computer level</label>
+                        <span>Software Design Engineer</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>CONTACT INFORMATION</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>Email</label>
+                        <a href="www.2546068636@qq.com" target="_blank">www.2546068636@qq.com</a>
+                    </li>
+                    <li>
+                        <label>Cnblogs</label>
+                        <a href="https://www.cnblogs.com/songboran" target="_blank">cnblogs.com/songboran</a>
+                    </li>
+                    <li>
+                        <label>Github</label>
+                        <a href="https://github.com/2546068636" target="_blank">github.com/2546068636</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>SKILLS</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>HTML</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>CSS</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>JavaScript</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Java</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Python</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>C#</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>QR Code</h2>
+                <hr/>
+                <img src="https://github.com/if2er/FeZaoDuKe-Collection/blob/master/ifeees.jpg?raw=true" style="width: 100%;" alt="">
+            </section>
+
+            <!-- 技术栈 -->
+            <!-- <div class="stack info-unit">
+                    <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <label>前端</label>
+                            <span>React、jQuery、微信小程序、Bootstrap、SASS、LESS</span>
+                        </li>
+                        <li>
+                            <label>后端</label>
+                            <span>Node.js、MySQL、MongoDB、WordPress、ThinkPHP</span>
+                        </li>
+                        <li>
+                            <label>其他</label>
+                            <span>Git、SVN、Markdown</span>
+                        </li>
+                    </ul>
+                </div> -->
+        </section>
+
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION BACKGROUND</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>ShiJiaZhuang TieDao University(Undergraduate)</span>
+                            <time>2018.9-NOW</time>
+                        </h3>
+                        <p>Ranking
+                            <mark>20/100</mark>,</p>passing CET-4 and CET-6,winning two scholarships
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 工作经历 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>LEARNING ROUTE</h2>
+                <hr/>
+                <ul id='timeline'>
+										<li class='work'>
+						<input id='radio'  name='works' type='radio'>
+							<div class="relative">
+								<label for='work4'>C、C++、UNIX/LINUX</label>
+									<span id='date'>2018</span>
+									<span id='circle'></span>
+							</div>
+					</li>
+					<li class='work'>
+						<input id='radio'  name='works' type='radio'>
+							<div class="relative">
+								<label for='work4'>JAVA、JAVA WEB、HTML、CSS、JQUERY、Discrete Mathematics、Data Structure、MYSQL</label>
+									<span id='date'>2019</span>
+									<span id='circle'></span>
+							</div>
+					</li>
+					<li class='work'>
+						<input id='radio'  name='works' type='radio'>
+							<div class="relative">
+								<label for='work4'>Android、Mybatis、AJAX、Lucene&solr、Python、MongoDB、Echarts、PHP、Spring、Hive、Hadoop、Scala</label>
+									<span id='date'>2020</span>
+									<span id='circle'></span>
+							</div>
+					</li>
+					
+										<li class='work'>
+						<input id='radio'  name='works' type='radio'>
+							<div class="relative">
+								<label for='work4'>Machine Learning、Neo4j</label>
+									<span id='date'>2021</span>
+									<span id='circle'></span>
+							</div>
+					</li>
+				</ul>
+            </section>
+
+            <!-- 项目经验 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-terminal" aria-hidden="true"></i>PERSONAL PROJECT</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>[PROJECT 1]Official document flowing system of Hebei Province</span>
+                            <time>2019.12</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Technology stack：Servelt+JSP+JavaBean+MYSQL+HTML</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Goal]Realize complete document flow process
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [Contribution]Responsible for the development of <mark>the whole project</mark>
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [Result]Ranking Grade C in department</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[PROJECT 2]AccountSystem</span>
+                            <span class="link">
+                                <a href="http://139.224.25.17/AccountSystem/" target="_blank">Click here to view the porject</a>
+                            </span>
+                            <time>2020.2-2020.3</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Technology stack：HTML 5+CSS+DBUtils+C3p0+MySQL+JavaBean+Servelt+JSP</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Goal]Make it convenient for users to keep accounts everyday
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [Contribution]Responsible for the development of <mark>the whole project</mark>
+                                <br/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[Project 3]Visualization of world epidemic situation</span>
+                            <span class="link">
+                                <a href="http://139.224.25.17/yiqing/" target="_blank">Click here to view the porject</a>
+                            </span>
+                            <time>2020.4</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Technology stack：HTML 5+CSS+JSP+ECharts+MySQL</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Goal]Multi dimensional visualization, data perspective and analysis of world epidemic data
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [Team]With two students to complete the whole project
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [Contribution]Analyze project requirements, clean and sort out relevant data
+                                <br/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[PROJECT 4]BookeManagementSystem</span>
+                            <span class="link">
+                                <a href="http://139.224.25.17/BookManagementSystem/" target="_blank">Click here to view the porject</a>
+                            </span>
+                            <time>2021</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Technology stack：SSM+HTML+MYSQL+JSP</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Goal]To realize the management of books by managers
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [Contribution]Responsible for the development of <mark>the whole project</mark>
+                                <br/>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </section>
+
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>SELF EVALUATION/EXPECTATION</h2>
+                <hr/>
+                <p>Easy-going and congenial,with a strong sense of responsibility and good team-spirit.Having played a couple important roles in the student organizations,honing the interpersonal communication skills</p>
+            </section>
+        </section>
+    </article>
+
+
+
+    <footer class="footer">
+        <p>© 2021 BoRan Song Latest update:
+            <time>2021.6.23</time>.</p>
+    </footer>
+
+    <!-- 侧栏 -->
+    <aside>
+        <ul>
+            <li>
+                <a href="https://github.com/2546068636" target="_blank">源代码</a>
+            </li>
+            <li>
+                <a href="https://www.cnblogs.com/songboran" target="_blank">CnBlogs</a>
+            </li>
+        </ul>
+    </aside>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
